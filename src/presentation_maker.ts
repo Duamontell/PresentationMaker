@@ -289,7 +289,7 @@ function updateImageSize(presentation: Presentation, slideId: string, imageId: s
 
 
 // Минимальные данные
-const minimalPresentation: Presentation = {
+const minPresentation: Presentation = {
     id: 'presentation-minimal',
     title: 'Minimal Presentation',
     author: 'Author 1',
@@ -301,7 +301,7 @@ const minimalPresentation: Presentation = {
 };
 
 // Максимальные данные
-const maximalPresentation: Presentation = {
+const maxPresentation: Presentation = {
     id: 'presentation-maximal',
     title: 'Maximal Presentation',
     author: 'Author 2',
@@ -314,7 +314,7 @@ const maximalPresentation: Presentation = {
                 title: 'Slide 1',
                 content: [
                     { id: 'text1', type: 'text', content: 'Hello World!', fontSize: 16, fontFamily: 'Arial' },
-                    { id: 'image1', type: 'image', src: 'image-url-1.jpg', width: 300, height: 200 }
+                    { id: 'image1', type: 'image', src: 'image.jpg', width: 300, height: 300 }
                 ],
                 backgroundColor: 'white'
             },
@@ -322,8 +322,8 @@ const maximalPresentation: Presentation = {
                 id: 'slide-002',
                 title: 'Slide 2',
                 content: [
-                    { id: 'text2', type: 'text', content: 'Another Slide!', fontSize: 20, fontFamily: 'Verdana' },
-                    { id: 'image2', type: 'image', src: 'image-url-2.jpg', width: 400, height: 300 }
+                    { id: 'text2', type: 'text', content: 'Another Slide!', fontSize: 20, fontFamily: 'Arial' },
+                    { id: 'image2', type: 'image', src: 'image.jpg', width: 300, height: 300 }
                 ],
                 backgroundColor: 'lightgrey'
             }
@@ -331,85 +331,97 @@ const maximalPresentation: Presentation = {
     }
 };
 
-// Тестирование функций
-function testFunctions() {
-    console.log("Testing with minimal data:");
-    let presentation = minimalPresentation;
 
-    // Изменение названия презентации
-    presentation = updatePresentationTitle(presentation, 'Updated Minimal Title');
-    console.log(presentation);
+let presentation = minPresentation;
 
-    // Добавление слайда
-    const newSlide: Slide = {
-        id: 'slide-003',
-        title: 'New Slide',
-        content: [],
-        backgroundColor: 'blue'
-    };
-    presentation = addSlide(presentation, newSlide);
-    console.log(presentation);
+// Изменение названия презентации
+presentation = updatePresentationTitle(presentation, 'Updated Minimal Title');
 
-    // Удаление слайда
-    presentation = removeSlide(presentation, 'slide-003');
-    console.log(presentation);
 
-    // Проверяем функции с максимальными данными
-    console.log("Testing with maximal data:");
-    presentation = maximalPresentation;
+// Добавление слайда
+const newSlide: Slide = {
+    id: 'slide-003',
+    title: 'New Slide',
+    content: [],
+    backgroundColor: 'blue'
+};
+presentation = addSlide(presentation, newSlide);
 
-    // Изменение названия презентации
-    presentation = updatePresentationTitle(presentation, 'Updated Maximal Title');
-    console.log(presentation);
 
-    // Добавление нового слайда
-    const anotherSlide: Slide = {
-        id: 'slide-003',
-        title: 'Another New Slide',
-        content: [],
-        backgroundColor: 'green'
-    };
-    presentation = addSlide(presentation, anotherSlide);
-    console.log(presentation);
+// Удаление слайда
+presentation = removeSlide(presentation, 'slide-003');
 
-    // Удаление слайда
-    presentation = removeSlide(presentation, 'slide-002');
-    console.log(presentation);
 
-    // Обновление текста на слайде
-    const newText: TextElement = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Tahoma' };
-    presentation = addTextToSlide(presentation, 'slide-001', newText);
-    console.log(presentation);
 
-    // Изменение текста
-    presentation = updateTextContent(presentation, 'slide-001', 'text3', 'Updated Text Element');
-    console.log(presentation);
 
-    // Изменение размера текста
-    presentation = updateTextSize(presentation, 'slide-001', 'text3', 22);
-    console.log(presentation);
 
-    // Изменение семейства шрифтов
-    presentation = updateFontFamily(presentation, 'slide-001', 'text3', 'Helvetica');
-    console.log(presentation);
+presentation = maxPresentation;
 
-    // Добавление изображения
-    const newImage: ImageElement = { id: 'image3', type: 'image', src: 'image-url-3.jpg', width: 500, height: 400 };
-    presentation = addImageToSlide(presentation, 'slide-001', newImage);
-    console.log(presentation);
+// Изменение названия презентации
+presentation = updatePresentationTitle(presentation, 'Updated Maximal Title');
 
-    // Изменение размера картинки
-    presentation = updateImageSize(presentation, 'slide-001', 'image3', 600, 500);
-    console.log(presentation);
 
-    // Удаление текста
-    presentation = removeTextFromSlide(presentation, 'slide-001', 'text3');
-    console.log(presentation);
+// Добавление нового слайда
+const anotherSlide: Slide = {
+    id: 'slide-003',
+    title: 'Another New Slide',
+    content: [],
+    backgroundColor: 'green'
+};
+presentation = addSlide(presentation, anotherSlide);
 
-    // Изменение фона слайда
-    presentation = updateSlideBackground(presentation, 'slide-001', 'yellow');
-    console.log(presentation);
-}
 
-// Запуск тестов
-testFunctions();
+// Удаление слайда
+presentation = removeSlide(presentation, 'slide-002');
+
+
+// Меняем позицию слайда
+presentation = moveSlide(presentation, 0, 1);
+
+// Перемещение текста
+presentation = moveTextPosition(presentation, 'slide-001', 'text1', 0);
+console.log("After moving text position:");
+
+
+// Удаление изображения
+presentation = removeImageFromSlide(presentation, 'slide-001', 'image1');
+console.log("After removing image:");
+
+
+// Перемещение изображения
+presentation = moveImagePosition(presentation, 'slide-001', 'image2', 0);
+console.log("After moving image position:");
+
+
+// Обновление текста на слайде
+const newText: TextElement = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Tahoma' };
+presentation = addTextToSlide(presentation, 'slide-001', newText);
+
+
+// Изменение текста
+presentation = updateTextContent(presentation, 'slide-001', 'text3', 'Updated Text Element');
+
+
+// Изменение размера текста
+presentation = updateTextSize(presentation, 'slide-001', 'text3', 22);
+
+
+// Изменение семейства шрифтов
+presentation = updateFontFamily(presentation, 'slide-001', 'text3', 'Helvetica');
+
+
+// Добавление изображения
+const newImage: ImageElement = { id: 'image3', type: 'image', src: 'image.jpg', width: 500, height: 400 };
+presentation = addImageToSlide(presentation, 'slide-001', newImage);
+
+
+// Изменение размера картинки
+presentation = updateImageSize(presentation, 'slide-001', 'image3', 600, 500);
+
+
+// Удаление текста
+presentation = removeTextFromSlide(presentation, 'slide-001', 'text3');
+
+
+// Изменение фона слайда
+presentation = updateSlideBackground(presentation, 'slide-001', 'yellow');
