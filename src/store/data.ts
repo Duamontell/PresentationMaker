@@ -21,7 +21,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-012',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -45,7 +44,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-011',
 			type: 'slide',
-			title: 'Slide 2',
 			content: [
 				{
 					id: "text2",
@@ -69,7 +67,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-008',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -93,7 +90,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-007',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -117,7 +113,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-006',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -141,7 +136,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-005',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -165,7 +159,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-004',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -189,7 +182,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-003',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",
@@ -213,7 +205,6 @@ export const maxPresentation: Presentation = {
 		{
 			id: 'slide-002',
 			type: 'slide',
-			title: 'Slide 1',
 			content: [
 				{
 					id: "text1",

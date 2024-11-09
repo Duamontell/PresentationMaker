@@ -1,12 +1,28 @@
 import styles from './TopPanel.module.css';
 import { renamePresentationTitle } from '../store/renamePresentationTitle';
+import { addSlide } from '../store/addSlide.ts'
+import { removeSlide } from '../store/removeSlide';
 import { dispatch } from '../store/editor';
 
 type TopPanelProps = {
 	title: string;
 };
 
+const resizeInput = () => {
+	const input = document.querySelector('input');
+	if (input) {
+		input.style.width = input.value.length + 'ch';
+	}
+};
+
+
 export const TopPanel = ({ title }: TopPanelProps) => {
+	function onAddSlide() {
+		dispatch(addSlide)
+	}
+	function onRemoveSlide() {
+		dispatch(removeSlide)
+	}
 	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
 		const newValue = event.target.value;
 		dispatch(renamePresentationTitle, newValue);
@@ -17,8 +33,8 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 			<header className={styles.header}>
 				<div className={styles.topPanel}>
 					<img className={styles.logo} src="/src/assets/logo.png"></img>
-					<button>Add Slide</button>
-					<button>Delete Slide</button>
+					<button onClick={onAddSlide}>Add Slide</button>
+					<button onClick={onRemoveSlide}>Delete Slide</button>
 				</div>
 				<div className={styles.topPanel}>
 					<button>Add text</button>
@@ -30,11 +46,14 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 					<button>Change background</button>
 				</div>
 				<div className={styles.topPanel}>
+					<img className={styles.iconName} src="public\pen-filled-writing-tool.png" alt="Presentation name" />
 					<input
 						className={styles.presentationName}
 						value={title}
-						onKeyUp={() => "this.style.width = ;"}
+						placeholder='Name'
 						onChange={onTitleChange}
+						onInput={resizeInput}
+						maxLength={20}
 					/>
 					<div className={styles.line}></div>
 					<button>Save</button>

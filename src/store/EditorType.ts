@@ -1,7 +1,7 @@
 import {Presentation} from "./types";
 
 export type SelectionType = {
-    selectedSlideId: string,
+    selectedSlideId: string | null,
 }
 
 export type EditorType = {

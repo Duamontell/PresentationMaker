@@ -2,7 +2,7 @@ import { Slide } from '../store/types';
 import styles from './Workspace.module.css';
 
 type WorkspaceProps = {
-    slide: Slide; // Используем null для случая, когда слайд не выбран
+    slide: Slide; 
 };
 
 export const Workspace = ({ slide }: WorkspaceProps) => {

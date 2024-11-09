@@ -59,4 +59,9 @@ button:hover {
 	background-color: transparent;
 	border: 0;
 	text-align: center;
+	min-width: 70px;
+}
+
+.iconName {
+	width: 20px;
 }

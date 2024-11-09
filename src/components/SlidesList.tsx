@@ -107,13 +107,13 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
                 return (
                     <div
                         key={slide.id}
-                        className={`${styles.slide} ${isSelected ? styles.selected : ''}`}  // Добавляем класс "selected", если слайд выбран
+                        className={styles.slide}
                     >
                         <span className={styles.slideNumber}>{index + 1}</span>
                         <div
                             className={`${styles.slideContainer} ${isSelected ? styles.selected : ''}`}
                             style={{ backgroundColor: slide.backgroundColor }}
-                            onClick={() => onSlideClick(slide.id)} // Вызываем onSlideClick при клике на слайд
+                            onClick={() => onSlideClick(slide.id)}
                         >
                             {slide.content.map((element) => {
                                 if (element.type === "text") {

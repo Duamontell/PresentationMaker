@@ -5,17 +5,11 @@ export type Presentation = {
 	createdDate: Date;
 	updateDate: Date;
 	slides: Slide[];
-	// slides: SlideCollection;
 };
-
-// export type SlideCollection = {
-// 	slides: Slide[];
-// };
 
 export type Slide = {
 	id: string;
 	type: "slide";
-	title: string;
 	content: (TextElement | ImageElement)[];
 	backgroundColor: string;
 };
