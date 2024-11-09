@@ -1,39 +1,3 @@
-// import { TopPanel } from './components/TopPanel';
-// import { SlidesList } from './components/SlidesList';
-// import { Workspace } from './components/Workspace';
-// // import { EditorType } from './store/types';
-// import { Presentation, Selection, Slide } from './store/types';
-// import { useState } from 'react';
-// import styles from './App.module.css';
-
-// type AppProps = {
-//   presentation: Presentation;
-//   selection: Selection;
-// };
-
-// function App({ presentation }: AppProps) {
-//   const slides = presentation.slides.slides;
-//   const [selectedSlide, setSelectedSlide] = useState<Slide | null>(null); // Создаем состояние для выбранного слайда
-
-//   const handleSlideSelect = (slide: Slide) => {
-//     setSelectedSlide(slide); // Обновляем выбранный слайд
-//   };
-
-//   return (
-//     <>
-//       <TopPanel title={presentation.title} />
-//       <div className={styles.container}>
-//         <SlidesList slides={slides} onSlideSelect={handleSlideSelect} />
-//         <Workspace slide={selectedSlide} />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default App;
-
-
-
 import { TopPanel } from './components/TopPanel';
 import { SlidesList } from './components/SlidesList';
 import { Workspace } from './components/Workspace';
