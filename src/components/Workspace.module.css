@@ -1,0 +1,14 @@
+.workspace {
+	overflow: auto;
+	max-height: 80vh;
+	align-self: center;
+}
+
+.workspaceContainer {
+	margin: 20px;
+	min-width: 1064px;
+	min-height: 616px;
+	background-color: white;
+	border: 1px solid #d5dbe3;
+	position: relative;
+}

@@ -13,6 +13,7 @@ type SlideCollection = {
 
 type Slide = {
     id: string;
+    type: "slide";
     title: string;
     content: (TextElement | ImageElement)[]; // создать типы элементов
     backgroundColor: string;
@@ -35,7 +36,8 @@ type ImageElement = {
 };
 
 type Selection = {
-    SelectedSlideId: string[]; // выбранные элементы
+    elementType: "text" | "image" | "slide";
+    selectedElementId: string[]; // выбранные элементы
 }
 
 // Изменение названия презентации
@@ -311,6 +313,7 @@ const maxPresentation: Presentation = {
         slides: [
             {
                 id: 'slide-001',
+                type: 'slide',
                 title: 'Slide 1',
                 content: [
                     { id: 'text1', type: 'text', content: 'Hello World!', fontSize: 16, fontFamily: 'Arial' },
@@ -320,6 +323,7 @@ const maxPresentation: Presentation = {
             },
             {
                 id: 'slide-002',
+                type: 'slide',
                 title: 'Slide 2',
                 content: [
                     { id: 'text2', type: 'text', content: 'Another Slide!', fontSize: 20, fontFamily: 'Arial' },
@@ -336,21 +340,22 @@ let presentation = minPresentation;
 
 // Изменение названия презентации
 presentation = updatePresentationTitle(presentation, 'Updated Minimal Title');
-
+console.log(presentation);
 
 // Добавление слайда
 const newSlide: Slide = {
     id: 'slide-003',
+    type: 'slide',
     title: 'New Slide',
     content: [],
     backgroundColor: 'blue'
 };
 presentation = addSlide(presentation, newSlide);
-
+console.log(presentation);
 
 // Удаление слайда
 presentation = removeSlide(presentation, 'slide-003');
-
+console.log(presentation);
 
 
 
@@ -359,69 +364,72 @@ presentation = maxPresentation;
 
 // Изменение названия презентации
 presentation = updatePresentationTitle(presentation, 'Updated Maximal Title');
-
+console.log(presentation);
 
 // Добавление нового слайда
 const anotherSlide: Slide = {
     id: 'slide-003',
+    type: 'slide',
     title: 'Another New Slide',
     content: [],
     backgroundColor: 'green'
 };
 presentation = addSlide(presentation, anotherSlide);
-
+console.log(presentation);
 
 // Удаление слайда
 presentation = removeSlide(presentation, 'slide-002');
-
+console.log(presentation);
 
 // Меняем позицию слайда
 presentation = moveSlide(presentation, 0, 1);
+console.log(presentation);
 
 // Перемещение текста
 presentation = moveTextPosition(presentation, 'slide-001', 'text1', 0);
-console.log("After moving text position:");
+console.log(presentation);
 
 
 // Удаление изображения
 presentation = removeImageFromSlide(presentation, 'slide-001', 'image1');
-console.log("After removing image:");
+console.log(presentation);
 
 
 // Перемещение изображения
 presentation = moveImagePosition(presentation, 'slide-001', 'image2', 0);
-console.log("After moving image position:");
+console.log(presentation);
 
 
 // Обновление текста на слайде
-const newText: TextElement = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Tahoma' };
+const newText: TextElement = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Arial' };
 presentation = addTextToSlide(presentation, 'slide-001', newText);
-
+console.log(presentation);
 
 // Изменение текста
 presentation = updateTextContent(presentation, 'slide-001', 'text3', 'Updated Text Element');
-
+console.log(presentation);
 
 // Изменение размера текста
 presentation = updateTextSize(presentation, 'slide-001', 'text3', 22);
-
+console.log(presentation);
 
 // Изменение семейства шрифтов
 presentation = updateFontFamily(presentation, 'slide-001', 'text3', 'Helvetica');
-
+console.log(presentation);
 
 // Добавление изображения
 const newImage: ImageElement = { id: 'image3', type: 'image', src: 'image.jpg', width: 500, height: 400 };
 presentation = addImageToSlide(presentation, 'slide-001', newImage);
-
+console.log(presentation);
 
 // Изменение размера картинки
 presentation = updateImageSize(presentation, 'slide-001', 'image3', 600, 500);
-
+console.log(presentation);
 
 // Удаление текста
 presentation = removeTextFromSlide(presentation, 'slide-001', 'text3');
-
+console.log(presentation);
 
 // Изменение фона слайда
 presentation = updateSlideBackground(presentation, 'slide-001', 'yellow');
+console.log(presentation);

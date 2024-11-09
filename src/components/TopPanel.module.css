@@ -1,0 +1,59 @@
+header {
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+	margin-bottom: 15px;
+	font-family: 'comfortaa', sans-serif;
+	justify-content: center;
+}
+
+button {
+	height: 40px;
+	padding: 5px;
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: 1000;
+	font-family: 'comfortaa', sans-serif;
+}
+
+button:hover {
+	background-color: #d5dbe3;
+
+}
+
+.topPanel {
+	align-items: center;
+	min-height: 60px;
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	border-radius: 24px;
+	background-color: #edf2fa;
+}
+
+.topPanel>*:first-child {
+	margin-left: 15px;
+}
+
+.topPanel>*:last-child {
+	margin-right: 15px;
+}
+
+.logo {
+	width: 30px;
+	height: 30px;
+}
+
+.line {
+	width: 1px;
+	height: 20px;
+	background-color: #d5dbe3;
+}
+
+.presentationName {
+	font-size: 20px;
+}

@@ -167,6 +167,7 @@ const maxPresentation = {
         slides: [
             {
                 id: 'slide-001',
+                type: 'slide',
                 title: 'Slide 1',
                 content: [
                     { id: 'text1', type: 'text', content: 'Hello World!', fontSize: 16, fontFamily: 'Arial' },
@@ -176,6 +177,7 @@ const maxPresentation = {
             },
             {
                 id: 'slide-002',
+                type: 'slide',
                 title: 'Slide 2',
                 content: [
                     { id: 'text2', type: 'text', content: 'Another Slide!', fontSize: 20, fontFamily: 'Arial' },
@@ -192,6 +194,7 @@ presentation = updatePresentationTitle(presentation, 'Updated Minimal Title');
 // Добавление слайда
 const newSlide = {
     id: 'slide-003',
+    type: 'slide',
     title: 'New Slide',
     content: [],
     backgroundColor: 'blue'
@@ -205,6 +208,7 @@ presentation = updatePresentationTitle(presentation, 'Updated Maximal Title');
 // Добавление нового слайда
 const anotherSlide = {
     id: 'slide-003',
+    type: 'slide',
     title: 'Another New Slide',
     content: [],
     backgroundColor: 'green'
@@ -224,7 +228,7 @@ console.log("After removing image:");
 presentation = moveImagePosition(presentation, 'slide-001', 'image2', 0);
 console.log("After moving image position:");
 // Обновление текста на слайде
-const newText = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Tahoma' };
+const newText = { id: 'text3', type: 'text', content: 'New Text Element', fontSize: 18, fontFamily: 'Arial' };
 presentation = addTextToSlide(presentation, 'slide-001', newText);
 // Изменение текста
 presentation = updateTextContent(presentation, 'slide-001', 'text3', 'Updated Text Element');
@@ -241,3 +245,4 @@ presentation = updateImageSize(presentation, 'slide-001', 'image3', 600, 500);
 presentation = removeTextFromSlide(presentation, 'slide-001', 'text3');
 // Изменение фона слайда
 presentation = updateSlideBackground(presentation, 'slide-001', 'yellow');
+console.log(presentation);
