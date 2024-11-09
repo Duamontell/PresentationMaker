@@ -4,12 +4,13 @@ export type Presentation = {
 	author: string;
 	createdDate: Date;
 	updateDate: Date;
-	slides: SlideCollection;
+	slides: Slide[];
+	// slides: SlideCollection;
 };
 
-export type SlideCollection = {
-	slides: Slide[];
-};
+// export type SlideCollection = {
+// 	slides: Slide[];
+// };
 
 export type Slide = {
 	id: string;
@@ -53,7 +54,7 @@ export type Selection = {
 	selectedElementId: string | null;
 };
 
-export type EditorType = {
-	presentation: Presentation;
-	// selection: Selection;
-};
+// export type EditorType = {
+// 	presentation: Presentation;
+// 	// selection: Selection;
+// };

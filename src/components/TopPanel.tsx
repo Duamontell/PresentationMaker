@@ -1,14 +1,20 @@
 import styles from './TopPanel.module.css';
+import { renamePresentationTitle } from '../store/renamePresentationTitle';
+import { dispatch } from '../store/editor';
 
 type TopPanelProps = {
 	title: string;
 };
 
 export const TopPanel = ({ title }: TopPanelProps) => {
+	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+		const newValue = event.target.value;
+		dispatch(renamePresentationTitle, newValue);
+	};
+
 	return (
 		<>
 			<header className={styles.header}>
-				<img src='/public/vite.svg'></img>
 				<div className={styles.topPanel}>
 					<img className={styles.logo} src="/src/assets/logo.png"></img>
 					<button>Add Slide</button>
@@ -24,7 +30,12 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 					<button>Change background</button>
 				</div>
 				<div className={styles.topPanel}>
-					<h1 className={styles.presentationName}>Name: {title}</h1>
+					<input
+						className={styles.presentationName}
+						value={title}
+						onKeyUp={() => "this.style.width = ;"}
+						onChange={onTitleChange}
+					/>
 					<div className={styles.line}></div>
 					<button>Save</button>
 					<div className={styles.line}></div>

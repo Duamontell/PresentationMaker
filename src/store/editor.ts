@@ -1,31 +1,26 @@
-// // import {editor} from './data.ts'
-// let editor = {}
-// let _editor = editor
-// let _handler = null
+import { editor } from './data.ts';
+import { EditorType } from './EditorType.ts';
 
-// function getEditor() {
-// 	return _editor
-// }
+let _editor = editor;
+let _handler: (() => void) | null = null;
 
-// function setEditor(newEditor) {
-// 	_editor = newEditor
-// }
+export function getEditor() {
+    return _editor;
+}
 
-// function dispatch(modifyFn: Function, payload?: Object): void {
-// 	const newEditor = modifyFn(_editor, payload)
-// 	setEditor(newEditor)
+export function setEditor(newEditor: EditorType) {
+    _editor = newEditor;
+}
 
-// 	if (_handler) {
-// 		_handler()
-// 	}
-// }
+export function dispatch(modifyFn: Function, payload?: Object): void {
+    const newEditor = modifyFn(_editor, payload);
+    setEditor(newEditor);
 
-// function addEditorChangeHandler(handler: Function): void {
-// 	_handler = handler
-// }
+    if (_handler) {
+        _handler();
+    }
+}
 
-// export {
-// 	getEditor,
-// 	dispatch,
-// 	addEditorChangeHandler,
-// }
+export function addEditorChangeHandler(handler: () => void): void {
+    _handler = handler;
+}
