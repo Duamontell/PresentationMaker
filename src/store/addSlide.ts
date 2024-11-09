@@ -1,8 +1,8 @@
-import { EditorType } from "./EditorType.ts";
-import { generateSlideId } from "./generateSlideId.ts"
+import { EditorType } from "./EditorType";
+import { generateId } from "./generateId.ts"
 
 export const addSlide = (editor: EditorType): EditorType => {
-	const slideId = generateSlideId(30);
+	const slideId = generateId(50);
 
 	return {
 		presentation: {

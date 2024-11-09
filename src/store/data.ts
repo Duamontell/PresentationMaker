@@ -69,15 +69,6 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
-					type: "text",
-					content: "Hello World!",
-					fontSize: 16,
-					fontFamily: "Arial",
-					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
-				},
-				{
 					id: "image1",
 					type: "image",
 					src: "VoicemeeterBanana.jpg",
@@ -92,15 +83,6 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
-					type: "text",
-					content: "!",
-					fontSize: 16,
-					fontFamily: "Arial",
-					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
-				},
-				{
 					id: "image1",
 					type: "image",
 					src: "vite.svg",
@@ -114,15 +96,6 @@ export const maxPresentation: Presentation = {
 			id: 'slide-006',
 			type: 'slide',
 			content: [
-				{
-					id: "text1",
-					type: "text",
-					content: "Hello World!",
-					fontSize: 16,
-					fontFamily: "Arial",
-					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
-				},
 				{
 					id: "image1",
 					type: "image",
@@ -161,15 +134,6 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
-					type: "text",
-					content: "Hello World!",
-					fontSize: 16,
-					fontFamily: "Arial",
-					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
-				},
-				{
 					id: "image1",
 					type: "image",
 					src: "vite.svg",
@@ -183,15 +147,6 @@ export const maxPresentation: Presentation = {
 			id: 'slide-003',
 			type: 'slide',
 			content: [
-				{
-					id: "text1",
-					type: "text",
-					content: "Hello World!",
-					fontSize: 16,
-					fontFamily: "Arial",
-					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
-				},
 				{
 					id: "image1",
 					type: "image",
@@ -232,6 +187,7 @@ export const editor: EditorType = {
 	presentation: maxPresentation,
 	selection: {
 		selectedSlideId: maxPresentation.slides[0].id,
+		selectionElementId: null
 	}
 }
 

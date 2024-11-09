@@ -1,8 +1,9 @@
 import { EditorType } from "./EditorType";
-import { generateId } from "./generateId.ts"
+import { generateId } from "./generateId.ts";
 
-export const addTextElement = (editor: EditorType): EditorType => {
-	const slideId = generateId(50);
+export const addImageElement = (editor: EditorType): EditorType => {
+	const imageSrc = "Screenshot 2024-11-09 203527.png";
+	const newImageId = generateId(50);
 
 	return {
 		...editor,
@@ -15,13 +16,11 @@ export const addTextElement = (editor: EditorType): EditorType => {
 						content: [
 							...slide.content,
 							{
-								id: slideId,
-								type: "text",
-								content: "New Text",
-								position: { x: 0, y: 0 },
-								size: { width: 200, height: 50 },
-								fontFamily: "Arial",
-								fontSize: 16,
+								id: newImageId,
+								type: "image",
+								src: imageSrc,
+								size: { width: 150, height: 150 },
+								position: { x: 500, y: 300 },
 							},
 						],
 					};
@@ -30,4 +29,4 @@ export const addTextElement = (editor: EditorType): EditorType => {
 			}),
 		},
 	};
-}
+};

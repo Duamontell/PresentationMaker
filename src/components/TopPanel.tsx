@@ -2,6 +2,8 @@ import styles from './TopPanel.module.css';
 import { renamePresentationTitle } from '../store/renamePresentationTitle';
 import { addSlide } from '../store/addSlide.ts'
 import { removeSlide } from '../store/removeSlide';
+import { addTextElement } from '../store/addTextElement.ts';
+import { addImageElement } from '../store/addImageElement.ts';
 import { dispatch } from '../store/editor';
 
 type TopPanelProps = {
@@ -23,6 +25,12 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 	function onRemoveSlide() {
 		dispatch(removeSlide)
 	}
+	function onAddTextElement() {
+		dispatch(addTextElement)
+	}
+	function onAddImageElement() {
+		dispatch(addImageElement)
+	}
 	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
 		const newValue = event.target.value;
 		dispatch(renamePresentationTitle, newValue);
@@ -37,9 +45,17 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 					<button onClick={onRemoveSlide}>Delete Slide</button>
 				</div>
 				<div className={styles.topPanel}>
-					<button>Add text</button>
+					<button onClick={onAddTextElement}>Add text</button>
 					<div className={styles.line}></div>
-					<button>Add image</button>
+					<button onClick={onAddImageElement}>Add image</button>
+					<input
+						id='image-create'
+						type="file"
+						accept='image/*'
+						style={{
+							display: 'none'
+						}}
+					/>
 					<div className={styles.line}></div>
 					<button>Delete element</button>
 					<div className={styles.line}></div>
