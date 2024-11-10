@@ -1,23 +1,16 @@
-import styles from './TopPanel.module.css';
 import { renamePresentationTitle } from '../store/renamePresentationTitle';
 import { addSlide } from '../store/addSlide.ts'
 import { removeSlide } from '../store/removeSlide';
 import { addTextElement } from '../store/addTextElement.ts';
 import { addImageElement } from '../store/addImageElement.ts';
 import { deleteElement } from '../store/deleteElement.ts';
+import { changeBackgroundColor } from '../store/changeBackgroundColor.ts';
 import { dispatch } from '../store/editor';
+import styles from './TopPanel.module.css';
 
 type TopPanelProps = {
 	title: string;
 };
-
-const resizeInput = () => {
-	const input = document.querySelector('input');
-	if (input) {
-		input.style.width = input.value.length + 'ch';
-	}
-};
-
 
 export const TopPanel = ({ title }: TopPanelProps) => {
 	function onAddSlide() {
@@ -35,9 +28,18 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 	function onDeleteElement() {
 		dispatch(deleteElement)
 	}
+	function onChangeBackgroundColor() {
+		dispatch(changeBackgroundColor, "rgb(105, 28, 116)")
+	}
 	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
 		const newValue = event.target.value;
 		dispatch(renamePresentationTitle, newValue);
+	};
+	const resizeInput = () => {
+		const input = document.getElementById('name-change') as HTMLInputElement;
+		if (input) {
+			input.style.width = input.value.length + 'ch';
+		}
 	};
 
 	return (
@@ -63,11 +65,12 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 					<div className={styles.line}></div>
 					<button onClick={onDeleteElement}>Delete element</button>
 					<div className={styles.line}></div>
-					<button>Change background</button>
+					<button onClick={onChangeBackgroundColor}>Change background</button>
 				</div>
 				<div className={styles.topPanel}>
 					<img className={styles.iconName} src="public\pen-filled-writing-tool.png" alt="Presentation name" />
 					<input
+						id='name-change'
 						className={styles.presentationName}
 						value={title}
 						placeholder='Name'

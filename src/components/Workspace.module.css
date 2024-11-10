@@ -20,4 +20,5 @@
 
 .selected {
 	border-color: rgb(11, 87, 208);
+	border-radius: 5px;
 }
