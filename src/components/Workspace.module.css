@@ -13,6 +13,11 @@
 	position: relative;
 }
 
+.element {
+	border: 1px solid;
+	border-color: transparent;
+}
+
 .selected {
-	
+	border-color: rgb(11, 87, 208);
 }

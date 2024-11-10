@@ -4,6 +4,7 @@ import { addSlide } from '../store/addSlide.ts'
 import { removeSlide } from '../store/removeSlide';
 import { addTextElement } from '../store/addTextElement.ts';
 import { addImageElement } from '../store/addImageElement.ts';
+import { deleteElement } from '../store/deleteElement.ts';
 import { dispatch } from '../store/editor';
 
 type TopPanelProps = {
@@ -31,6 +32,9 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 	function onAddImageElement() {
 		dispatch(addImageElement)
 	}
+	function onDeleteElement() {
+		dispatch(deleteElement)
+	}
 	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
 		const newValue = event.target.value;
 		dispatch(renamePresentationTitle, newValue);
@@ -57,7 +61,7 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 						}}
 					/>
 					<div className={styles.line}></div>
-					<button>Delete element</button>
+					<button onClick={onDeleteElement}>Delete element</button>
 					<div className={styles.line}></div>
 					<button>Change background</button>
 				</div>

@@ -23,7 +23,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
+					id: "text12323",
 					type: "text",
 					content: "Hello World!",
 					fontSize: 16,
@@ -32,7 +32,7 @@ export const maxPresentation: Presentation = {
 					position: { x: 10, y: 10 },
 				},
 				{
-					id: "image1",
+					id: "image154337",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -46,7 +46,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text2",
+					id: "text2876980",
 					type: "text",
 					content: "Another Slide!",
 					fontSize: 20,
@@ -55,7 +55,7 @@ export const maxPresentation: Presentation = {
 					position: { x: 15, y: 15 },
 				},
 				{
-					id: "image2",
+					id: "image257675673",
 					type: "image",
 					src: "Screenshot 2023-11-24 231127.png",
 					size: { width: 300, height: 300 },
@@ -69,7 +69,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "image1",
+					id: "image11111",
 					type: "image",
 					src: "VoicemeeterBanana.jpg",
 					size: { width: 500, height: 300 },
@@ -83,7 +83,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "image1",
+					id: "image1575658678",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -97,7 +97,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "image1",
+					id: "image1686787980",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -111,7 +111,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
+					id: "text11234576",
 					type: "text",
 					content: "Hello World!",
 					fontSize: 16,
@@ -120,7 +120,7 @@ export const maxPresentation: Presentation = {
 					position: { x: 10, y: 10 },
 				},
 				{
-					id: "image1",
+					id: "image19876543",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -134,7 +134,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "image1",
+					id: "image167483393",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 150, height: 300 },
@@ -148,7 +148,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "image1",
+					id: "image11282458",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -162,7 +162,7 @@ export const maxPresentation: Presentation = {
 			type: 'slide',
 			content: [
 				{
-					id: "text1",
+					id: "text156879245",
 					type: "text",
 					content: "Hello World!",
 					fontSize: 16,
@@ -171,7 +171,7 @@ export const maxPresentation: Presentation = {
 					position: { x: 10, y: 10 },
 				},
 				{
-					id: "image1",
+					id: "image1658769835",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
@@ -187,7 +187,7 @@ export const editor: EditorType = {
 	presentation: maxPresentation,
 	selection: {
 		selectedSlideId: maxPresentation.slides[0].id,
-		selectionElementId: null
+		selectedElementId: null
 	}
 }
 

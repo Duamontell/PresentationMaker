@@ -19,7 +19,7 @@ function App({ editor }: AppProps) {
       <TopPanel title={editor.presentation.title}></TopPanel>
       <div className={styles.container}>
         <SlidesList slides={editor.presentation.slides} selection={editor.selection}></SlidesList>
-        <Workspace slide={selectedSlide}></Workspace>
+        <Workspace slide={selectedSlide} selection={editor.selection}></Workspace>
       </div>
     </>
   )

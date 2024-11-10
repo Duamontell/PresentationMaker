@@ -20,7 +20,6 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
         <div className={styles.slideList}>
             {slides.map((slide, index) => {
                 const isSelected = selection?.selectedSlideId === slide.id;
-
                 return (
                     <div
                         key={slide.id}
