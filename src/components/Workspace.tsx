@@ -45,7 +45,7 @@ export const Workspace = ({ slide, selection }: WorkspaceProps) => {
                                 <img
                                     className={`${styles.element} ${isSelectedElement ? styles.selected : ''}`}
                                     key={element.id}
-                                    src={'/public/' + element.src}
+                                    src={element.src}
                                     alt="Slide Image"
                                     style={{
                                         position: 'absolute',

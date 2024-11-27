@@ -64,7 +64,7 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
                                             }}
                                         >
                                             <img
-                                                src={'/public/' + element.src}
+                                                src={element.src}
                                                 alt="Slide Image"
                                                 style={{
                                                     width: '100%',

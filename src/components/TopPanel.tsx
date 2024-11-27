@@ -22,9 +22,12 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 	function onAddTextElement() {
 		dispatch(addTextElement)
 	}
-	function onAddImageElement() {
-		dispatch(addImageElement)
-	}
+	// function onAddImageElement() {
+	// 	const fileInput = document.getElementById('image-create') as HTMLInputElement;
+	// 	if (fileInput) {
+	// 		fileInput.click(); // Открывает диалоговое окно выбора файла
+	// 	}
+	// }
 	function onDeleteElement() {
 		dispatch(deleteElement)
 	}
@@ -39,6 +42,20 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 		const input = document.getElementById('name-change') as HTMLInputElement;
 		if (input) {
 			input.style.width = input.value.length + 'ch';
+		}
+	};
+	const onAddImageElement = () => {
+		const fileInput = document.getElementById('image-create') as HTMLInputElement;
+		if (fileInput) {
+			fileInput.click(); // Инициирует открытие окна выбора файла
+		}
+	};
+	const onFileChange = () => {
+		const fileInput = document.getElementById('image-create') as HTMLInputElement;
+		const file = fileInput?.files?.[0];
+		if (file) {
+			const imageUrl = URL.createObjectURL(file);
+			dispatch(addImageElement, imageUrl); // Передаем `imageUrl` в функцию
 		}
 	};
 
@@ -61,6 +78,7 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 						style={{
 							display: 'none'
 						}}
+						onChange={onFileChange}
 					/>
 					<div className={styles.line}></div>
 					<button onClick={onDeleteElement}>Delete element</button>

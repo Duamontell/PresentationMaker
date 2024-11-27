@@ -1,4 +1,4 @@
-import {EditorType} from "./EditorType.ts";
+import { EditorType } from "./EditorType.ts";
 
 export function removeSlide(editor: EditorType): EditorType {
     if (!editor.selection) {
@@ -23,6 +23,7 @@ export function removeSlide(editor: EditorType): EditorType {
         },
         selection: {
             selectedSlideId: newSelectedSlideId,
+            selectedElementId: null
         },
     }
 }
