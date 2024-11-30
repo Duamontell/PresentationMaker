@@ -27,7 +27,6 @@
 
 .slide {
     display: flex;
-    flex-wrap: wrap;
     gap: 1vw; 
     margin-bottom: 2vh; 
     justify-content: space-between;

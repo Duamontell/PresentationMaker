@@ -41,3 +41,12 @@
 	border-color: rgb(11, 87, 208);
 	border-radius: 5px;
 }
+
+.resizeHandle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    z-index: 10;
+	cursor: move;
+}

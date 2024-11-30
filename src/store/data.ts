@@ -29,14 +29,14 @@ export const maxPresentation: Presentation = {
 					fontSize: 16,
 					fontFamily: "Arial",
 					size: { width: 100, height: 50 },
-					position: { x: 10, y: 10 },
+					position: { x: 500, y: 400 },
 				},
 				{
 					id: "image154337",
 					type: "image",
 					src: "vite.svg",
 					size: { width: 300, height: 300 },
-					position: { x: 20, y: 50 },
+					position: { x: 0, y: 0 },
 				},
 			],
 			backgroundColor: 'white'
