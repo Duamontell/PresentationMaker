@@ -56,7 +56,7 @@
 
 .slideNumber {
     font-family: 'comfortaa';
-    font-size: 1.2vw; /* Размер текста зависит от ширины окна */
+    font-size: 1.2vw;
     font-weight: bold;
     user-select: none; 
 }

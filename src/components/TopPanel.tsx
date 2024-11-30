@@ -86,7 +86,7 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 					<button onClick={onChangeBackgroundColor}>Change background</button>
 				</div>
 				<div className={styles.topPanel}>
-					<img className={styles.iconName} src="public\pen-filled-writing-tool.png" alt="Presentation name" />
+					<img className={styles.iconName} src="pen-filled-writing-tool.png" alt="Presentation name" />
 					<input
 						id='name-change'
 						className={styles.presentationName}

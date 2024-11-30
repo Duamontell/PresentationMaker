@@ -29,6 +29,7 @@
 	background-color: white;
 	border: 0.1vh solid #d5dbe3;
 	position: relative;
+	overflow: hidden;
   }
   
 .element {

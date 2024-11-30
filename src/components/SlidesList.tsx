@@ -41,8 +41,6 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
                                                 position: 'absolute',
                                                 left: element.position.x * SCALE,
                                                 top: element.position.y * SCALE,
-                                                width: element.size.width * SCALE,
-                                                height: element.size.height * SCALE,
                                                 fontFamily: element.fontFamily,
                                                 fontSize: element.fontSize * SCALE,
                                             }}
