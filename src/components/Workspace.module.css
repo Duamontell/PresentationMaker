@@ -4,15 +4,33 @@
 	align-self: center;
 }
 
-.workspaceContainer {
+/* .workspaceContainer {
 	margin: 20px;
 	min-width: 1064px;
-	min-height: 616px;
+	max-height: 616px;
 	background-color: white;
 	border: 1px solid #d5dbe3;
 	position: relative;
-}
+} */
 
+/* .workspaceContainer {
+	width: 64vw;
+	height: 77vh;
+	overflow: auto;
+	background-color: white;
+	border: 1px solid #d5dbe3;
+	position: relative;
+} */
+
+.workspaceContainer {
+	width: auto; 
+	height: 80%; 
+	aspect-ratio: 16 / 9; 
+	background-color: white;
+	border: 0.1vh solid #d5dbe3;
+	position: relative;
+  }
+  
 .element {
 	border: 2px solid;
 	border-color: transparent;

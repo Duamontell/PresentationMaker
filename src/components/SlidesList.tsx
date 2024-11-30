@@ -9,7 +9,7 @@ export type SlidesListProps = {
     selection?: SelectionType | null;
 };
 
-const SCALE = 0.125;
+const SCALE = 0.16;
 
 export const SlidesList = ({ slides, selection }: SlidesListProps) => {
     function onSlideClick(slideId: string) {

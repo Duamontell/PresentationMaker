@@ -1,67 +1,80 @@
 header {
-	padding: 15px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 60px;
-	margin-bottom: 15px;
-	font-family: 'comfortaa', sans-serif;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    font-family: 'comfortaa', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: #ffffff;
 }
 
-button {
-	height: 40px;
-	padding: 5px;
-	background-color: transparent;
-	border: 0px;
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 17px;
-	font-weight: 1000;
-	font-family: 'comfortaa', sans-serif;
+header>*:first-child {
+    width: 20vw;
 }
 
-button:hover {
-	background-color: #d5dbe3;
-
+.header>*:last-child {
+    max-width: 30vw;
+    min-width: 22vw;
 }
+
 
 .topPanel {
-	align-items: center;
-	min-height: 60px;
-	display: flex;
-	gap: 8px;
-	flex-wrap: wrap;
-	border-radius: 24px;
-	background-color: #edf2fa;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1vh;
+    border-radius: 2vw;
+    background-color: #edf2fa;
+    height: 8vh;
+    max-width: 38vw;
 }
 
 .topPanel>*:first-child {
-	margin-left: 15px;
+    margin-left: 0.5vw;
 }
 
 .topPanel>*:last-child {
-	margin-right: 15px;
+    margin-right: 1vw;
+}
+
+button {
+    align-items: center;
+    height: 5vh;
+    padding: 0.5vw;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    font-size: calc(0.5vw + 0.5vw);
+    font-weight: 1000;
+    font-family: 'comfortaa', sans-serif;
+}
+
+button:hover {
+    background-color: #d5dbe3;
 }
 
 .logo {
-	width: 30px;
-	height: 30px;
+    width: 3vw;
+    height: 3vw;
 }
 
 .line {
-	width: 1px;
-	height: 20px;
-	background-color: #d5dbe3;
+    width: 0.1vw;
+    height: 3vh;
+    background-color: #d5dbe3;
 }
 
 .presentationName {
-	font-size: 20px;
-	background-color: transparent;
-	border: 0;
-	text-align: center;
-	min-width: 70px;
+    font-size: 2vh;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    min-width: 5vw;
 }
 
 .iconName {
-	width: 20px;
+    width: 2vw;
+    height: 2vw;
 }
