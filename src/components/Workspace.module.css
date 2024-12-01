@@ -42,11 +42,43 @@
 	border-radius: 5px;
 }
 
-.resizeHandle {
+/* .resizeHandle {
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: blue;
     z-index: 10;
 	cursor: move;
+} */
+
+.top-left {
+	cursor: nwse-resize;
+}
+
+.top-right {
+	cursor: nesw-resize;
+}
+
+.bottom-left {
+	cursor: nesw-resize;
+}
+
+.bottom-right {
+	cursor: nwse-resize;
+}
+
+.center-top {
+	cursor: ns-resize;
+}
+
+.center-bottom {
+	cursor: ns-resize;
+}
+
+.center-left {
+	cursor: ew-resize;
+}
+
+.center-right {
+	cursor: ew-resize;
 }

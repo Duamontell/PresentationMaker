@@ -28,7 +28,7 @@ function App({ editor }: AppProps) {
   const selectedSlide = editor.selection
     ? editor.presentation.slides.find(slide => slide.id === editor.selection?.selectedSlideId) || editor.presentation.slides[0]
     : editor.presentation.slides[0];
-  console.dir(editor);
+  // console.dir(editor);
 
   return (
     <>
