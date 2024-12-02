@@ -7,6 +7,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .container {
@@ -14,7 +16,8 @@
   height: 85vh;
   display: flex;
   overflow: hidden;
-  gap: 5vh;
+  /* gap: 5vh; */
+  gap: 5vw;
   justify-content: center;
   align-items: center;
 }

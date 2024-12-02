@@ -22,12 +22,6 @@ export const TopPanel = ({ title }: TopPanelProps) => {
 	function onAddTextElement() {
 		dispatch(addTextElement)
 	}
-	// function onAddImageElement() {
-	// 	const fileInput = document.getElementById('image-create') as HTMLInputElement;
-	// 	if (fileInput) {
-	// 		fileInput.click(); // Открывает диалоговое окно выбора файла
-	// 	}
-	// }
 	function onDeleteElement() {
 		dispatch(deleteElement)
 	}

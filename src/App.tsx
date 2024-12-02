@@ -18,11 +18,6 @@ function App({ editor }: AppProps) {
     };
 
     window.addEventListener('wheel', disableZoom, { passive: false });
-
-    // Очистка обработчика при размонтировании компонента
-    return () => {
-      window.removeEventListener('wheel', disableZoom);
-    };
   }, []);
 
   const selectedSlide = editor.selection

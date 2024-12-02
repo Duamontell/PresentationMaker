@@ -14,13 +14,12 @@ export function useDragAndDrop(slide: Slide, selectedElementId: string | null) {
     }
 
     function onDragOrResize(event: React.MouseEvent) {
-        if (!selectedElementId || !dragStart) return;
-
+        if (!dragStart) return;
         const deltaX = event.clientX - dragStart.x;
         const deltaY = event.clientY - dragStart.y;
 
         const element = slide.content.find((el) => el.id === selectedElementId);
-        if (!element) return;
+        if (!element) return; 
 
         if (activeHandle) {
             const { x, y } = element.position;
@@ -74,7 +73,6 @@ export function useDragAndDrop(slide: Slide, selectedElementId: string | null) {
                 x: element.position.x + deltaX,
                 y: element.position.y + deltaY,
             };
-            console.log(newPosition);
             dispatch(updateElementPosition, { id: selectedElementId, position: newPosition });
         }
 

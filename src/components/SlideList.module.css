@@ -8,12 +8,12 @@
 } */
 
 .slideList {
-    max-width: 15vw; /* Ширина списка слайдов зависит от ширины окна */
-    padding: 0 2vw 0 2vw; /* Отступы относительно размеров окна */
+    max-width: 15vw;
+    padding: 0 2vw 0 2vw; 
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 85vh; /* Высота зависит от высоты окна */
+    height: 85vh;
 }
 
 .slideList::-webkit-scrollbar {
@@ -41,8 +41,8 @@
     border: 0.2vw solid #d5dbe3;
     transition: border-color 0.3s ease;
     overflow: hidden;
-    user-select: none; 
-    -webkit-user-drag: none;
+    -webkit-user-drag: element;
+    user-select: none;
 }
 
 .slideContainer:hover {

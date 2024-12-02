@@ -2,6 +2,7 @@ import { Slide } from '../store/types';
 import { SelectionType } from '../store/EditorType';
 import { dispatch } from '../store/editor';
 import { setSelection } from '../store/setSelection';
+import { useSlidesDragAndDrop } from '../hooks/useSlidesDragAndDrop'; // Импорт нового хука
 import styles from './SlideList.module.css';
 
 export type SlidesListProps = {
@@ -12,6 +13,8 @@ export type SlidesListProps = {
 const SCALE = 0.2;
 
 export const SlidesList = ({ slides, selection }: SlidesListProps) => {
+    const { onDragStart, onDragOver, onDrop, onDragEnd } = useSlidesDragAndDrop(slides);
+
     function onSlideClick(slideId: string) {
         dispatch(setSelection, { selectedSlideId: slideId });
     }
@@ -24,6 +27,11 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
                     <div
                         key={slide.id}
                         className={styles.slide}
+                        draggable 
+                        onDragStart={(event) => onDragStart(event, slide.id)}
+                        onDragOver={onDragOver}
+                        onDrop={(event) => onDrop(event, slide.id)}
+                        onDragEnd={onDragEnd}
                     >
                         <span className={styles.slideNumber}>{index + 1}</span>
                         <div
@@ -81,3 +89,4 @@ export const SlidesList = ({ slides, selection }: SlidesListProps) => {
         </div>
     );
 };
+

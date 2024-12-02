@@ -27,6 +27,10 @@ export const Workspace = ({ slide, selection }: WorkspaceProps) => {
         dispatch(setSelection, { selectedElementId: elementId });
     }
 
+    // function resetSelectionElement() {
+    //     dispatch(setSelection, { selectedElementId: [] });
+    // }
+
     function getElementSize(elementId: string) {
         const element = elementRefs.current[elementId];
         if (element) {
@@ -51,6 +55,7 @@ export const Workspace = ({ slide, selection }: WorkspaceProps) => {
             style={{ backgroundColor: slide.backgroundColor || 'white' }}
             onMouseMove={onDragOrResize}
             onMouseUp={onDragEnd}
+            // onClick={() => resetSelectionElement()}
         >
             {slide.content.map((element) => {
                 const isSelectedElement = selection?.selectedElementId === element.id;
