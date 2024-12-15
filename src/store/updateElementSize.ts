@@ -1,17 +1,17 @@
 import { EditorType } from './EditorType';
-import { Size } from './types';
+import { UpdateElementSizeAction } from './redux/actions';
 
-export function updateElementSize(editor: EditorType, payload: { id: string; size: Size }): EditorType {
-	const { id, size } = payload;
+export function updateElementSize(editor: EditorType, action: UpdateElementSizeAction): EditorType {
+	// const { id, size } = action.payload;
 
 	const updatedSlides = editor.presentation.slides.map((slide) => ({
 		...slide,
 		content: slide.content.map((element) => {
-			if (element.id === id) {
+			if (element.id === action.payload.id) {
 				if (element.type === 'text' || element.type === 'image') {
 					return {
 						...element,
-						size, 
+						size: action.payload.size,
 					};
 				}
 			}

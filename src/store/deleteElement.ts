@@ -2,7 +2,7 @@ import { EditorType } from "./EditorType.ts";
 
 export const deleteElement = (editor: EditorType): EditorType => {
     if (!editor.selection?.selectedElementId) {
-        return editor; 
+        return editor;
     }
 
     return {
@@ -21,7 +21,7 @@ export const deleteElement = (editor: EditorType): EditorType => {
                 return slide;
             }),
         },
-        selection: { 
+        selection: {
             selectedSlideId: editor.selection.selectedSlideId,
             selectedElementId: null,
         },

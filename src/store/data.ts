@@ -1,13 +1,21 @@
 import { Presentation } from "./types";
 import { EditorType } from "./EditorType";
+import { generateId } from "./generateId";
 
 export const minPresentation: Presentation = {
-	id: 'presentation-minimal',
-	title: 'Minimal Presentation',
-	author: 'Author 1',
+	id: generateId(50),
+	title: 'Presentation',
+	author: 'Author',
 	createdDate: new Date(),
 	updateDate: new Date(),
-	slides: []
+	slides: [
+		{
+			id: generateId(50),
+			type: 'slide',
+			content: [],
+			backgroundColor: 'white'
+		}
+	]
 
 };
 
@@ -184,9 +192,9 @@ export const maxPresentation: Presentation = {
 };
 
 export const editor: EditorType = {
-	presentation: maxPresentation,
+	presentation: minPresentation,
 	selection: {
-		selectedSlideId: maxPresentation.slides[0].id,
+		selectedSlideId: null,
 		selectedElementId: null
 	}
 }

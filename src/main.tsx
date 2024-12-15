@@ -1,34 +1,21 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import App from './App.tsx'
-// import { minPresentation, maxPresentation } from './store/data.ts'
-
-// import { Presentation } from './store/types.ts'
-
-// let presentation = minPresentation;
-// presentation = maxPresentation;
-
-// // Рендерим приложение
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <App presentation={presentation} />
-//   </StrictMode>
-// );
-
-
+import App from './App.tsx'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
 import { addEditorChangeHandler, getEditor } from "./store/editor.ts";
+import { Provider } from 'react-redux'
+import { store } from './store/redux/store.ts';
 
 const root = createRoot(document.getElementById('root')!)
-function render() {
+// function render() {
   root.render(
     <StrictMode>
-      <App editor={getEditor()} />
-    </StrictMode>,
+      <Provider store={store}>
+        {/* <App editor={getEditor()} /> */}
+        <App/>
+      </Provider>
+    </StrictMode>
   )
-}
+// }
 
-addEditorChangeHandler(render)
-render()
+// addEditorChangeHandler(render)
+// render()

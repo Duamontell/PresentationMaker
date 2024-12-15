@@ -47,8 +47,3 @@ export type Selection = {
 	elementType: "text" | "image" | "slide";
 	selectedElementId: string | null;
 };
-
-// export type EditorType = {
-// 	presentation: Presentation;
-// 	// selection: Selection;
-// };

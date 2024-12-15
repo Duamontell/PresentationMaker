@@ -1,8 +1,8 @@
 import { EditorType } from "./EditorType";
 import { generateId } from "./generateId.ts";
+import { AddImageElementAction } from "./redux/actions.ts";
 
-export const addImageElement = (editor: EditorType, imageURL: string): EditorType => {
-	const imageSrc = "Screenshot 2024-11-09 203527.png";
+export const addImageElement = (editor: EditorType, action: AddImageElementAction): EditorType => {
 	const newImageId = generateId(50);
 
 	return {
@@ -18,8 +18,8 @@ export const addImageElement = (editor: EditorType, imageURL: string): EditorTyp
 							{
 								id: newImageId,
 								type: "image",
-								src: imageURL,
-								size: { width: 150, height: 150 },
+								src: action.payload,
+								size: { width: 200, height: 150 },
 								position: { x: 500, y: 300 },
 							},
 						],

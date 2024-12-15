@@ -1,11 +1,12 @@
 import {EditorType} from "./EditorType.ts";
+import { RenamePresentationTitleAction } from "./redux/actions.ts";
 
-export function renamePresentationTitle(editor: EditorType, newTitle: string): EditorType {
+export function renamePresentationTitle(editor: EditorType, action: RenamePresentationTitleAction): EditorType {
     return {
         ...editor,
         presentation: {
             ...editor.presentation,
-            title: newTitle,
+            title: action.payload,
         }
     }
 }

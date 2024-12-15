@@ -1,6 +1,7 @@
 import { EditorType } from "./EditorType.ts";
+import { ChangeBackgroundColorAction } from "./redux/actions.ts";
 
-export const changeBackgroundColor = (editor: EditorType, newColor: string): EditorType => {
+export const changeBackgroundColor = (editor: EditorType, action: ChangeBackgroundColorAction): EditorType => {
     if (!editor.selection?.selectedSlideId) {
         return editor; 
     }
@@ -13,7 +14,7 @@ export const changeBackgroundColor = (editor: EditorType, newColor: string): Edi
                 if (slide.id === editor.selection.selectedSlideId) {
                     return {
                         ...slide,
-                        backgroundColor: newColor,
+                        backgroundColor: action.payload,
                     };
                 }
                 return slide;
