@@ -155,7 +155,15 @@ import { useAppActions } from '../hooks/useAppActions.ts';
 
 export function TopPanel() {
 	const titleName = useAppSelector((editor => editor.presentation.title))
-	const { addSlide, removeSlide, addTextElement, addImageElement, deleteElement, changeBackgroundColor, renamePresentationTitle } = useAppActions()
+	const { addSlide,
+		removeSlide,
+		addTextElement,
+		addImageElement,
+		deleteElement,
+		changeBackgroundColor,
+		renamePresentationTitle,
+		setEditor
+	} = useAppActions()
 
 	const onTitleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
 		const newValue = event.target.value;
@@ -266,7 +274,8 @@ export function TopPanel() {
 						style={{
 							display: 'none'
 						}}
-						onChange={importFromFile} />
+						onChange={(event) => importFromFile(event, setEditor)}
+					/>
 				</div>
 			</header>
 		</>
