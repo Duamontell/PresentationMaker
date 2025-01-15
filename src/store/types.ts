@@ -12,6 +12,7 @@ export type Slide = {
 	type: "slide";
 	content: (TextElement | ImageElement)[];
 	backgroundColor: string;
+	backgroundImage: string;
 };
 
 export type Position = {
@@ -34,8 +35,9 @@ export type Element = {
 export type TextElement = Element & {
 	type: "text";
 	content: string;
-	fontSize: number;
 	fontFamily: string;
+	fontSize: number;
+	fontColor: string;
 };
 
 export type ImageElement = Element & {

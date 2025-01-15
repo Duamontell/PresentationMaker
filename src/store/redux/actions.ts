@@ -7,7 +7,11 @@ export enum ActionType {
 	ADD_TEXT = 'addTextElement',
 	ADD_IMAGE = 'addImageElement',
 	DELETE_ELEMENT = 'deleteElement',
+	CHANGE_FONT_FAMILY = 'changeFontFamily',
+	CHANGE_FONT_SIZE = 'changeFontSize',
+	CHANGE_FONT_COLOR = 'changeFontColor',
 	CHANGE_BACKGROUND_COLOR = 'changeBackgroundColor',
+	CHANGE_BACKGROUND_IMAGE = 'changeBackgroundImage',
 	RENAME_PRESENTATION_TITLE = 'renamePresentationTitle',
 
 	UPDATE_ELEMENT_CONTENT = 'updateElementContent',
@@ -41,8 +45,28 @@ type DeleteElementAction = {
 	type: ActionType.DELETE_ELEMENT,
 }
 
+export type ChangeFontFamilyAction = {
+	type: ActionType.CHANGE_FONT_FAMILY,
+	payload: string,
+}
+
+export type ChangeFontSizeAction = {
+	type: ActionType.CHANGE_FONT_SIZE,
+	payload: number,
+}
+
+export type ChangeFontColorAction = {
+	type: ActionType.CHANGE_FONT_COLOR,
+	payload: string,
+}
+
 export type ChangeBackgroundColorAction = {
 	type: ActionType.CHANGE_BACKGROUND_COLOR,
+	payload: string,
+}
+
+export type ChangeBackgroundImageAction = {
+	type: ActionType.CHANGE_BACKGROUND_IMAGE,
 	payload: string,
 }
 
@@ -94,10 +118,13 @@ export type EditorAction =
 	AddSlideAction
 	| RemoveSlideAction
 	| AddTextElementAction
-	| AddTextElementAction
 	| AddImageElementAction
 	| DeleteElementAction
+	| ChangeFontFamilyAction
+	| ChangeFontSizeAction
+	| ChangeFontColorAction
 	| ChangeBackgroundColorAction
+	| ChangeBackgroundImageAction
 	| RenamePresentationTitleAction
 	| UpdateElementContentAction
 	| UpdateElementPositionAction

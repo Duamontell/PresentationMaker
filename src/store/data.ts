@@ -13,7 +13,8 @@ export const minPresentation: Presentation = {
 			id: generateId(50),
 			type: 'slide',
 			content: [],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		}
 	]
 
@@ -34,8 +35,9 @@ export const maxPresentation: Presentation = {
 					id: "text12323",
 					type: "text",
 					content: "Hello World!",
-					fontSize: 16,
 					fontFamily: "Arial",
+					fontColor: 'black',
+					fontSize: 16,
 					size: { width: 100, height: 50 },
 					position: { x: 500, y: 400 },
 				},
@@ -47,7 +49,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 0, y: 0 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-011',
@@ -57,8 +60,9 @@ export const maxPresentation: Presentation = {
 					id: "text2876980",
 					type: "text",
 					content: "Another Slide!",
-					fontSize: 20,
 					fontFamily: "Arial",
+					fontColor: 'black',
+					fontSize: 20,
 					size: { width: 150, height: 60 },
 					position: { x: 15, y: 15 },
 				},
@@ -70,7 +74,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 25, y: 25 },
 				},
 			],
-			backgroundColor: 'red'
+			backgroundColor: 'red',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-008',
@@ -84,7 +89,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 20, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-007',
@@ -98,7 +104,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 20, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-006',
@@ -112,7 +119,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 20, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-005',
@@ -122,8 +130,9 @@ export const maxPresentation: Presentation = {
 					id: "text11234576",
 					type: "text",
 					content: "Hello World!",
-					fontSize: 16,
 					fontFamily: "Arial",
+					fontColor: "black",
+					fontSize: 16,
 					size: { width: 100, height: 50 },
 					position: { x: 10, y: 10 },
 				},
@@ -135,7 +144,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 100, y: 100 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-004',
@@ -149,7 +159,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 500, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-003',
@@ -163,7 +174,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 20, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 		{
 			id: 'slide-002',
@@ -173,8 +185,9 @@ export const maxPresentation: Presentation = {
 					id: "text156879245",
 					type: "text",
 					content: "Hello World!",
-					fontSize: 16,
 					fontFamily: "Arial",
+					fontColor: "black",
+					fontSize: 16,
 					size: { width: 100, height: 50 },
 					position: { x: 10, y: 10 },
 				},
@@ -186,7 +199,8 @@ export const maxPresentation: Presentation = {
 					position: { x: 20, y: 20 },
 				},
 			],
-			backgroundColor: 'white'
+			backgroundColor: 'white',
+			backgroundImage: ''
 		},
 	]
 };

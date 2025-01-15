@@ -13,7 +13,8 @@ export const defaultEditor: EditorType = {
 				id: generateId(50),
 				type: 'slide',
 				content: [],
-				backgroundColor: 'white'
+				backgroundColor: 'white',
+				backgroundImage: ''
 			}
 		],
 	},

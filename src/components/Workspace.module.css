@@ -1,38 +1,23 @@
 .workspace {
 	overflow: auto;
-	max-height: 80vh;
-	align-self: center;
 }
 
-/* .workspaceContainer {
-	margin: 20px;
-	min-width: 1064px;
-	max-height: 616px;
-	background-color: white;
-	border: 1px solid #d5dbe3;
-	position: relative;
-} */
-
-/* .workspaceContainer {
-	width: 64vw;
-	height: 77vh;
-	overflow: auto;
-	background-color: white;
-	border: 1px solid #d5dbe3;
-	position: relative;
-} */
-
 .workspaceContainer {
-	width: auto; 
-	height: 80%; 
-	aspect-ratio: 16 / 9; 
+	margin: 20px;
+	width: 1065px;
+	height: 599px;
 	background-color: white;
-	border: 0.1vh solid #d5dbe3;
+	border: 1px solid #d5dbe3;
 	position: relative;
 	overflow: hidden;
-  }
-  
+}
+
+.workspaceContainer::-webkit-scrollbar-track{
+	background-color: white;
+}
+
 .element {
+	word-wrap: break-word;
 	border: 2px solid;
 	border-color: transparent;
 }

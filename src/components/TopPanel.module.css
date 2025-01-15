@@ -1,80 +1,94 @@
 header {
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: 15px;
+    margin-bottom: 15px;
     font-family: 'comfortaa', sans-serif;
     justify-content: center;
-    align-items: center;
-    height: 15vh;
-    background-color: #ffffff;
-}
-
-header>*:first-child {
-    width: 20vw;
-}
-
-.header>*:last-child {
-    max-width: 30vw;
-    min-width: 22vw;
-}
-
-
-.topPanel {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 1vh;
-    border-radius: 2vw;
-    background-color: #edf2fa;
-    height: 8vh;
-    max-width: 38vw;
-}
-
-.topPanel>*:first-child {
-    margin-left: 0.5vw;
-}
-
-.topPanel>*:last-child {
-    margin-right: 1vw;
 }
 
 button {
-    align-items: center;
-    height: 5vh;
-    padding: 0.5vw;
+    height: 40px;
+    padding: 5px;
     background-color: transparent;
-    border: 0;
+    border: 0px;
     cursor: pointer;
-    border-radius: 0.5vw;
-    font-size: calc(0.5vw + 0.5vw);
+    border-radius: 5px;
+    font-size: 17px;
     font-weight: 1000;
     font-family: 'comfortaa', sans-serif;
+    align-items: center;
+}
+
+.undoRedoButton {
+    height: 100%;
+    width: auto;
 }
 
 button:hover {
     background-color: #d5dbe3;
+
+}
+
+.topPanel {
+    align-items: center;
+    min-height: 60px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-radius: 24px;
+    background-color: #edf2fa;
+    justify-content: center;
+}
+
+.topPanel>*:first-child {
+    margin-left: 15px;
+}
+
+.topPanel>*:last-child {
+    margin-right: 15px;
 }
 
 .logo {
-    width: 3vw;
-    height: 3vw;
+    width: 30px;
+    height: 30px;
 }
 
 .line {
-    width: 0.1vw;
-    height: 3vh;
+    width: 1px;
+    height: 20px;
     background-color: #d5dbe3;
 }
 
 .presentationName {
-    font-size: 2vh;
+    font-size: 20px;
     background-color: transparent;
     border: 0;
     text-align: center;
-    min-width: 5vw;
+    min-width: 70px;
 }
 
 .iconName {
-    width: 2vw;
-    height: 2vw;
+    width: 20px;
+}
+
+dialog {
+    /* display: flex;
+    flex-direction: column; */
+    width: calc(100%);
+    max-width: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: auto;
+    position: fixed;
+    top: 5%;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.dialogWindow {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }

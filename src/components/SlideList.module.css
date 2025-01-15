@@ -1,44 +1,34 @@
-/* .slideList {
-	max-width: 202px;
-	padding: 15px 15px 0 20px;
-	display: flex;
-	flex-direction: column;
-	overflow-y: auto;
-	max-height: 85vh;
-} */
-
 .slideList {
-    max-width: 15vw;
-    padding: 0 2vw 0 2vw; 
+    width: 250px;
+    padding-right: 25px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 85vh;
-}
-
-.slideList::-webkit-scrollbar {
-    width: 0.5vw; 
-}
-
-.slideList::-webkit-scrollbar-thumb {
-    background-color: #d5dbe3;
-    border-radius: 1vw;
+    max-height: 85vh;
+    scrollbar-gutter: stable;
+    scrollbar-width: auto;
 }
 
 .slide {
     display: flex;
-    gap: 1vw; 
-    margin-bottom: 2vh; 
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
     justify-content: space-between;
+}
+
+.slide>*:last-child {
+    margin-bottom: 0;
 }
 
 .slideContainer {
     position: relative;
-    width: 12vw; 
-    height: calc(12vw * 9 / 16);
+    min-width: 213px;
+    min-height: 120px;
+    /* margin-bottom: 15px; */
     background-color: aqua;
-    border-radius: 1.5vw; 
-    border: 0.2vw solid #d5dbe3;
+    border-radius: 20px;
+    border: 3px solid #d5dbe3;
     transition: border-color 0.3s ease;
     overflow: hidden;
     -webkit-user-drag: element;
@@ -55,7 +45,7 @@
 
 .slideNumber {
     font-family: 'comfortaa';
-    font-size: 1.2vw;
+    font-size: medium;
     font-weight: bold;
-    user-select: none; 
+    user-select: none;
 }

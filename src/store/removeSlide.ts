@@ -1,19 +1,17 @@
 import { EditorType } from "./EditorType.ts";
 
 export function removeSlide(editor: EditorType): EditorType {
-    if (!editor.selection) {
+    if (!editor.selection.selectedSlideId) {
         return editor
     }
 
-    const removeSlideId = editor.selection.selectedSlideId
-    const removeSlideIndex = editor.presentation.slides.findIndex(slide => slide.id == removeSlideId)
+    const newSlides = editor.presentation.slides.filter(
+        slide => !editor.selection.selectedSlideId?.includes(slide.id)
+    );
 
-    const newSlides = editor.presentation.slides.filter(slide => slide.id != removeSlideId)
-
-    let newSelectedSlideId = null
+    let newSelectedSlideId: string[] = [];
     if (newSlides.length > 0) {
-        const index = Math.min(removeSlideIndex, newSlides.length - 1)
-        newSelectedSlideId = newSlides[index].id
+        newSelectedSlideId = [newSlides[0].id];
     }
 
     return {
@@ -22,8 +20,8 @@ export function removeSlide(editor: EditorType): EditorType {
             slides: newSlides,
         },
         selection: {
-            selectedSlideId: newSelectedSlideId,
-            selectedElementId: null
+            selectedSlideId: newSelectedSlideId, 
+            selectedElementId: null,
         },
-    }
+    };
 }

@@ -10,7 +10,7 @@ export const deleteElement = (editor: EditorType): EditorType => {
         presentation: {
             ...editor.presentation,
             slides: editor.presentation.slides.map((slide) => {
-                if (slide.id === editor.selection.selectedSlideId) {
+                if (editor.selection.selectedSlideId && slide.id === editor.selection.selectedSlideId[0]) {
                     return {
                         ...slide,
                         content: slide.content.filter(

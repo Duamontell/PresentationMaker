@@ -9,7 +9,7 @@ export const addTextElement = (editor: EditorType): EditorType => {
 		presentation: {
 			...editor.presentation,
 			slides: editor.presentation.slides.map((slide) => {
-				if (slide.id === editor.selection!.selectedSlideId) {
+				if (editor.selection.selectedSlideId && slide.id === editor.selection.selectedSlideId[0]) {
 					return {
 						...slide,
 						content: [
@@ -21,6 +21,7 @@ export const addTextElement = (editor: EditorType): EditorType => {
 								position: { x: 0, y: 0 },
 								size: { width: 200, height: 50 },
 								fontFamily: "Arial",
+								fontColor: "black",
 								fontSize: 16,
 							},
 						],

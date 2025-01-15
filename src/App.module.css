@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-#root {
-  height: 100vh;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +8,21 @@
 }
 
 .container {
-  width: 100%;
-  height: 85vh;
   display: flex;
-  overflow: hidden;
-  /* gap: 5vh; */
-  gap: 5vw;
+  gap: 100px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  margin-top: 15px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d5dbe3;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

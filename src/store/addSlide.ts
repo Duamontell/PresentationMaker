@@ -13,6 +13,7 @@ export const addSlide = (editor: EditorType): EditorType => {
 					id: slideId,
 					type: "slide",
 					backgroundColor: "white",
+					backgroundImage: "",
 					content: [],
 				}
 			]
@@ -20,7 +21,7 @@ export const addSlide = (editor: EditorType): EditorType => {
 		selection: {
 			...editor.selection,
 			selectedSlideId: editor.presentation.slides.length === 0
-				? slideId
+				? [slideId]
 				: editor.selection!.selectedSlideId
 		}
 	};

@@ -20,10 +20,38 @@ export function deleteElement() {
 	}
 }
 
+export function changeFontFamily(fontFamily: string) {
+	return {
+		type: ActionType.CHANGE_FONT_FAMILY,
+		payload: fontFamily
+	}
+}
+
+export function changeFontSize(size: number) {
+	return {
+		type: ActionType.CHANGE_FONT_SIZE,
+		payload: size
+	}
+}
+
+export function changeFontColor(color: string) {
+	return {
+		type: ActionType.CHANGE_FONT_COLOR,
+		payload: color
+	}
+}
+
 export function changeBackgroundColor(color: string) {
 	return {
 		type: ActionType.CHANGE_BACKGROUND_COLOR,
 		payload: color
+	}
+}
+
+export function changeBackgroundImage(image: string) {
+	return {
+		type: ActionType.CHANGE_BACKGROUND_IMAGE,
+		payload: image
 	}
 }
 
