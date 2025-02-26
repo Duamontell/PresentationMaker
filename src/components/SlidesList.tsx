@@ -11,16 +11,8 @@ export function SlidesList() {
     const slides = useAppSelector((editor => editor.presentation.slides));
     const selection = useAppSelector((editor => editor.selection));
     const selectedSlides = selection?.selectedSlideId || [];
-    console.log(selectedSlides)
 
     const { setSelection } = useAppActions()
-
-    // function onSlideClick(slideId: string) {
-    //     setSelection({
-    //         selectedSlideId: slideId,
-    //         selectedElementId: null
-    //     })
-    // }
 
     function onSlideClick(slideId: string, event: React.MouseEvent) {
         const isCtrlPressed = event.ctrlKey || event.metaKey;

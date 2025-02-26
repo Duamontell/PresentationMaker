@@ -14,7 +14,7 @@ export function useDragAndDrop(slide: Slide, selectedElementId: string | null) {
     }, [slide]);
 
     function onDragStart(event: React.MouseEvent, handleId: string | null) {
-        setActiveHandle(handleId); 
+        setActiveHandle(handleId);
         setDragStart({ x: event.clientX, y: event.clientY });
     }
 
@@ -123,7 +123,7 @@ export function useDragAndDrop(slide: Slide, selectedElementId: string | null) {
     }
 
     return {
-        tempSlide, 
+        tempSlide,
         onDragStart,
         onDragOrResize,
         onDragEnd,

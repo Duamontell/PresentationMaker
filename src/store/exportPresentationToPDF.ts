@@ -11,17 +11,18 @@ export const exportPresentationToPDF = async (slides: Slide[], fileName: string 
 
 	for (let i = 0; i < slides.length; i++) {
 		const slideCanvasContainer = document.createElement("div");
-		slideCanvasContainer.id = "pdf-div"
+		slideCanvasContainer.id = "pdf-div";
 		slideCanvasContainer.style.width = "1065px";
 		slideCanvasContainer.style.height = "599px";
 		slideCanvasContainer.style.backgroundColor = slides[i].backgroundColor;
-		slideCanvasContainer.style.backgroundImage = slides[i].backgroundImage;
+		slideCanvasContainer.style.backgroundImage = `url(${slides[i].backgroundImage})`;
+		slideCanvasContainer.style.backgroundRepeat = "no-repeat";
+		slideCanvasContainer.style.backgroundSize = "cover";
 		slideCanvasContainer.style.position = "relative";
 		slideCanvasContainer.style.display = "none";
 
 		slides[i].content.forEach((element) => {
 			const el = document.createElement("div");
-			console.log(element.position.x);
 
 			if (element.type === "text") {
 				el.style.position = "absolute";
